@@ -1,0 +1,25 @@
+.dropdown-item:hover{
+    background-color: rgb(38, 213, 22) !important;
+}
+body{
+    max-height: 100vh;
+}
+header{
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header>img{
+    max-height: 3rem;
+    object-fit: cover;
+}
+main{
+    min-height: 80vh;
+}
+footer{
+    min-height: 5vh;
+}
+#social>a>img{
+    height: 2.5rem;
+}
