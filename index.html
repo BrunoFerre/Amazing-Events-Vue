@@ -44,7 +44,7 @@
 </header>
 <main class="d-flex bg-dark flex-wrap aling-items-center justify-content-center">
   <template v-if="category.length > 0" v-for="categoria of category">
-    <div class="form-check d-flex gap-2 aling-items-center justify-content-center m-4">
+    <div class="form-check d-flex gap-2 aling-items-center justify-content-center ">
       <input class="form-check-input" type="checkbox" v-bind:id="categoria" v-bind:value="categoria" v-model="categoryCheck">
       <label class="form-check-label text-white" v-bind:for="categoria"> {{categoria}} </label>
   </div> 
@@ -74,7 +74,7 @@
 
 </main>
 <footer class="bg-secondary d-flex aling-items-center">
-    <div class=" d-flex aling-items-center gap-2 m-2" id="social">
+    <div class=" d-flex aling-items-center gap-2" id="social">
     <a href="#"> <img src="./assets/images/whatsapp.png" alt=""></a>
     <a href="#"> <img src="./assets/images/instagram.png" alt=""></a>
     <a href="#"> <img src="./assets/images/facebook.png" alt=""></a>
