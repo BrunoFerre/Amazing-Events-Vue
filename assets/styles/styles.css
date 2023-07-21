@@ -35,3 +35,8 @@ footer{
 #social>a>img{
     height: 2.5rem;
 }
+
+tr,th,td{
+    border: 1px solid lightblue;
+    border-collapse: collapse !important; 
+}

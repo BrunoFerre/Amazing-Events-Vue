@@ -8,14 +8,15 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./../styles/styles.css">
     <link rel="shortcut icon" href="./../images/favicon.png" type="image/x-icon">
-    <title>Past Events || Amazing Events</title>
+    <title>Past || Amazing Events</title>
 </head>
 
 <body>
+  <div id="app">
     <header class="w-100 bg-success">
-          <nav class="navbar  navbar-expand-lg bg-success fs-5">
+          <nav class="navbar sticky-top navbar-expand-lg bg-success fs-5 ">
             <div class="container-fluid">
-              <a class="navbar-brand" href="../../index.html">Home</a>
+              <a class="navbar-brand" href="./../../index.html">Home</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -41,16 +42,46 @@
           </nav>
           <img src="./../images/amazing_brand.png" alt="Logo Amazing">
 </header>
-<main class="d-flex bg-dark">
+<main class="d-flex bg-dark flex-wrap aling-items-center justify-content-center">
+  <template v-if="category.length > 0" v-for="categoria of category">
+    <div class="form-check d-flex gap-2 aling-items-center justify-content-center m-4">
+      <input class="form-check-input" type="checkbox" v-bind:id="categoria" v-bind:value="categoria" v-model="categoryCheck">
+      <label class="form-check-label text-white" v-bind:for="categoria"> {{categoria}} </label>
+  </div> 
+  </template>
+  <input type="search" class="form-control w-25 h-25 m-3" placeholder="Search Name" aria-describedby="basic-addon2" v-model="inputSearch">
+  <div class="container-fluid d-flex flex-wrap gap-4 justify-content-center aling-items-center p-4 ">
+  {{filterCrossed}}
+    <template v-if="filter.length > 0 " v-for="event of filter">
+    <div class="card" >
+      <img v-bind:src="event.image" class="card-img-top" alt="...">
+      <div class="card-body bg-dark text-white">
+        <h5 class="card-title">{{event.name}}</h5>
+        <p class="card-text">{{event.description}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </template>
+    <template v-else>
+      <div>
+        <h5 class="display-1 text-white">Not Fuond</h5>
+      </div>
+    </template>
+  </div>
+
+
 </main>
 <footer class="bg-secondary d-flex aling-items-center">
-    <div class=" d-flex aling-items-center gap-2 " id="social">
+    <div class=" d-flex aling-items-center gap-2 m-2" id="social">
     <a href="#"> <img src="./../images/whatsapp.png" alt=""></a>
     <a href="#"> <img src="./../images/instagram.png" alt=""></a>
     <a href="#"> <img src="./../images/facebook.png" alt=""></a>
 </div>
 </footer>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./../scripts/past.js"></script>
 </body>
 
 </html>

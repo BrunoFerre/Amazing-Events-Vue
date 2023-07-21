@@ -50,7 +50,7 @@
   </div> 
   </template>
   <input type="search" class="form-control w-25 h-25 m-3" placeholder="Search Name" aria-describedby="basic-addon2" v-model="inputSearch">
-  <div class="container d-flex flex-wrap gap-4 justify-content-center aling-items-center ">
+  <div class="container-fluid d-flex flex-wrap gap-4 justify-content-center aling-items-center  p-4">
   {{filterCrossed}}
     <template v-if="filter.length > 0 " v-for="event of filter">
     <div class="card" >
