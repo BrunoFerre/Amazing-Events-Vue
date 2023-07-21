@@ -12,36 +12,83 @@
 </head>
 
 <body>
-    <header class="w-100 bg-success">
-          <nav class="navbar sticky-top navbar-expand-lg bg-success fs-5">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="./../../index.html">Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="./upcoming.html">Upcoming Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./past.html">Past Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./stats.html">Stats</a>
-                  </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-          <img src="./../images/amazing_brand.png" alt="Logo Amazing">
+  <header class="w-100 bg-success">
+    <nav class="navbar sticky-top navbar-expand-lg bg-success fs-5">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="./assets/pages/upcoming.html">Upcoming Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./assets/pages/past.html">Past Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./assets/pages/contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./assets/pages/stats.html">Stats</a>
+            </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <img src="./../images/amazing_brand.png" alt="Logo Amazing">
 </header>
-<main class="d-flex bg-dark">
+<main class="bg-dark text-white">
+    <div id="carouselExample" class="carousel slide mb-4 ">
+        <div class="carousel-inner">
+            <div class="carousel-item active ">
+                <img src="./../images/optional_banner_1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./../images/optional_banner_2.jpg" class="d-block w-100 position-relative bottom-50"
+                    alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./../images/optional_banner_3.jpg"
+                    class="d-block w-100 position position-relative bottom-50" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./../images/optional_banner_4.jpg" class="d-block w-100 position-relative bottom-50"
+                    alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./../images/optional_banner_5.jpg" class="d-block w-100 position-relative bottom-50"
+                    alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <form class="d-flex flex-column container">
+        <div class="mb-3 container w-50">
+            <label for="exampleInputName" class="form-label">Name </label>
+            <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
+            <div class="mb-3">
+                <label for="exampleInputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail">
+            </div>
+            <div class="form">
+                <label for="">Message</label>
+                <textarea class="form-control" id="" style="height: 100px"></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </div>
+    </form>
 </main>
 <footer class="bg-secondary d-flex aling-items-center">
     <div class=" d-flex aling-items-center gap-2 m-2" id="social">

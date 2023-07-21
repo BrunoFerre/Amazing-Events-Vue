@@ -12,18 +12,12 @@ createApp({
             arrayOrdenado:[],
             nameEvent:'',
             capacityEventMayor: Number,
-
             nameMayorPorcentajeAsistencia:'',
             asistenciaPorcentajeMayor: Number,
-
             nameMenorPorcentajeAsistencia:'',
             asistenciaPorcentajeMenor:Number,
-
-
             nuevoArrayPast:[],
             nuevoArrayUp:[],
-
-
         }
     },
     created(){
