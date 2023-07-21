@@ -42,25 +42,61 @@
           </nav>
           <img src="./../images/amazing_brand.png" alt="Logo Amazing">
 </header>
-<main class="d-flex bg-dark">
-  <div class="d-flex flex-column align-items-center  justify-content-center">
-  <table class="d-flex bg-dark text-white justify-content-center table-primary mb-2 p-3">
+<main class="bg-dark d-flex flex-column align-items-center justify-content-center  gap-4">
+  <table class="text-dark justify-content-center">
     <th colspan="3">Events Stats </th>
-    <tr>
+    <tr >
       <td>Events whith the hightest percentage of attendance</td>
       <td>Events whith the lowest percentage of attendance.</td>
       <td>Event with larger capacity</td>
     </tr>
-    <tr>
-      <td>ijdasdo</td>
-      <td>ijdasdo</td>
-      <td>ijdasdo</td>
+    <tr class="text-center">
+      <td>{{nameMayorPorcentajeAsistencia}} {{asistenciaPorcentajeMayor}}%</td>
+      <td>{{nameMenorPorcentajeAsistencia}} {{asistenciaPorcentajeMenor}}%</td>
+      <td>{{nameEvent}} {{capacityEventMayor}}</td>
     </tr>
   </table>
-  </div>
+  <table class="text-dark d-flex justify-content-center flex-column" >
+ <thead>
+   <th colspan="6">Past Event Stats </th>
+   <tr>
+     <td >Events whith the hightest percentage of attendance</td>
+     <td >Events whith the lowest percentage of attendance.</td>
+     <td >Event with larger capacity</td>
+    </tr>
+  </thead>
+    <tbody>
+      <template v-if="nuevoArrayPast.length>0" v-for="evento of nuevoArrayPast">
+      <tr class="text-center">
+        <td>{{evento.category}}</td>
+        <td>$ {{evento.revenue}}</td>
+        <td>{{evento.porcentaje}} %</td>
+      </tr>
+    </template>
+  </tbody>
+</table>
+<table class="text-dark d-flex justify-content-center flex-column" >
+ <thead>
+   <th colspan="6">Upcoming Event Stats </th>
+   <tr >
+     <td >Events whith the hightest percentage of attendance</td>
+     <td >Events whith the lowest percentage of attendance.</td>
+     <td >Event with larger capacity</td>
+    </tr>
+  </thead>
+  <tbody>
+    <template v-if="nuevoArrayUp.length>0" v-for="evento of nuevoArrayUp">
+    <tr class="text-center">
+      <td>{{evento.category}}</td>
+      <td>$ {{evento.revenue}}</td>
+      <td>{{evento.porcentaje}} %</td>
+    </tr>
+  </template>
+  </tbody>
+</table>
 </main>
 <footer class="bg-secondary d-flex aling-items-center">
-  <div class=" d-flex aling-items-center gap-2 m-2" id="social">
+  <div class=" d-flex aling-items-center gap-2" id="social">
   <a href="#"> <img src="../images/whatsapp.png" alt=""></a>
   <a href="#"> <img src="../images/instagram.png" alt=""></a>
   <a href="#"> <img src="../images/facebook.png" alt=""></a>

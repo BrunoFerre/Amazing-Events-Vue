@@ -35,8 +35,10 @@ footer{
 #social>a>img{
     height: 2.5rem;
 }
-
-tr,th,td{
+table{
+    background-color: #3a8ea0 !important;
+}
+tr,td{
     border: 1px solid lightblue;
-    border-collapse: collapse !important; 
+    width: 20rem;
 }
